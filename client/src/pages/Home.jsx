@@ -7,7 +7,6 @@ export default function Home() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    console.log('🏠 Home mounted');
       const fetchLatest = async () => {
       try {
         const res = await axios.get('/api/tracks/latest');

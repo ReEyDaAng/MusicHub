@@ -202,16 +202,19 @@ export default function Search() {
           )}
 
           <div className="flex items-center space-x-4 mb-4">
-            <button
-              onClick={() => playTrack(getCurrentTrack())}
-              className={`px-4 py-2 rounded-lg text-white font-medium ${
-                isPlaying
-                  ? 'bg-orange-600 hover:bg-orange-700'
-                  : 'bg-green-600 hover:bg-green-700'
-              }`}
-            >
-              {isPlaying ? '⏸️ Пауза' : '▶️ Грати'}
-            </button>
+          <button
+            onClick={() => playTrack(track)}
+            disabled={!track.preview_url}
+            className={`w-10 h-10 flex items-center justify-center rounded-lg text-white ${
+              !track.preview_url
+                ? 'bg-gray-600 cursor-not-allowed'
+                : currentlyPlaying === track.id && isPlaying
+                ? 'bg-orange-600 hover:bg-orange-700'
+                : 'bg-green-600 hover:bg-green-700'
+            }`}
+          >
+            {currentlyPlaying === track.id && isPlaying ? '⏸️' : '▶️'}
+          </button>
             <button
               onClick={stopTrack}
               className="px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white font-medium"
@@ -317,8 +320,7 @@ export default function Search() {
 
               <button
                 onClick={() => addToFavorites(track)}
-                className="px-3 py-1 rounded-lg bg-pink-600 hover:bg-pink-700 text-white"
-                title="Додати в обране"
+                className="w-10 h-10 flex items-center justify-center rounded-lg bg-pink-600 hover:bg-pink-700 text-white"
               >
                 💖
               </button>
