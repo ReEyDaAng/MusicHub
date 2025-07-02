@@ -8,7 +8,6 @@ import bg from './assets/bg.jpg';
 export default function App() {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* 1) сам фон */}
       <img
         src={bg}
         alt="фон"

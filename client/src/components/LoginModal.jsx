@@ -18,7 +18,7 @@ function LoginModal({ onClose }) {
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || 'Помилка логіну');
       // При успішному логіні отримуємо name та token
-      const userName = data.user?.name || data.name || 'User';
+      const userName = data.username || 'User';
       login({ name: userName, token: data.token });
       onClose();
     } catch (err) {

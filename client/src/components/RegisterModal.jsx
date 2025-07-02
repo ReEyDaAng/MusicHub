@@ -19,7 +19,8 @@ function RegisterModal({ onClose }) {
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || 'Помилка реєстрації');
       // після успіху реєстрації логінимо користувача
-      login({ name: data.user.name, token: data.token });
+      const userName = data.username || 'User';
+      login({ name: userName, token: data.token });
       onClose();
     } catch (err) {
       setError(err.message);

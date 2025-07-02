@@ -37,7 +37,7 @@ export default function Navbar() {
 
           {user ? (
             <>
-              <span className="px-3 py-1 bg-blue-600 rounded">
+              <span className="px-3 py-1 bg-gray-600 shadow-inner rounded">
                 {user.name}
               </span>
               <button
