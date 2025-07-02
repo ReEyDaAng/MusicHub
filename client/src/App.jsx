@@ -2,8 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Search from './pages/Search';
 import Favorites from './pages/Favorites';
-import Login from './pages/Login';
-import Register from './pages/Register';
 import Home from './pages/Home';
 import bg from './assets/bg.jpg';
 
@@ -23,8 +21,6 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/search" element={<Search />} />
             <Route path="/favorites" element={<Favorites />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
           </Routes>
         </main>
       </div>
