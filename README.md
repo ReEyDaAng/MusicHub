@@ -93,7 +93,8 @@ MusicHub/
 │   ├── src/
 │   │   ├── assets/  # фонові картинки
 │   │   ├── components/  # Navbar, картки тощо
-│   │   ├── pages/   # Home, Search, Favorites, Login, Register
+│   │   ├── pages/   # Home, Search, Favorites
+│   │   ├── context/ # AuthContext
 │   │   ├── App.jsx
 │   │   └── main.jsx
 │   └── vite.config.js
@@ -109,4 +110,4 @@ MusicHub/
 
 ---
 
-*Автор: Максим(https://github.com/ReEyDaAng)*
+*Автор: Максим (https://github.com/ReEyDaAng)*
